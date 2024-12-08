@@ -1,0 +1,9 @@
+<ul class="antic-didone-regular flex space-x-4 my-10">
+    {% for item in menuItems %}
+        <li>
+            <a href="{{ path(item.route) }}" class="hover:underline cursor-pointer">
+                {{ item.label }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
