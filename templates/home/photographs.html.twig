@@ -9,17 +9,76 @@
     {% include 'components/menu.html.twig' with { menuItems: menuItems } %}
     <div class="w-[1280px] flex items-center justify-center m-auto">
         <div class="w-1/2 mr-8 flex flex-col items-center justify-center">
-            <h1 class="antic-didone-regular text-4xl mb-20 mt-10">Photographs</h1>
+            <h1 class="antic-didone-regular text-4xl mb-8 mt-4">Photographs</h1>
         </div>
     </div>
 
-    <div class="flex flex-col items-center">
-        <img class="h-full object-contain" src="{{ asset('/img/scan0026-2-1920x1280.webp') }}" alt="Schweissdissi par Marianne Maric">
-        <img class="h-full object-contain" src="{{ asset('/img/Christophe-Guye-Galerie-Marianne-Maric-Odalisque.jpg') }}" alt="Schweissdissi par Marianne Maric">
-        <img class="h-full object-contain" src="{{ asset('/img/marianne-maric-lamp-girl-photography-selling-sex-exhibition-at-showstudio.jpg') }}" alt="Schweissdissi par Marianne Maric">
-        <img class="h-full object-contain" src="{{ asset('/img/sans-titre-4.jpg') }}" alt="Schweissdissi par Marianne Maric">
-        <img class="h-full object-contain" src="{{ asset('/img/SÇries_Sarajevo_Danube_copyright_Marianne_Maric-15.jpg') }}" alt="Schweissdissi par Marianne Maric">
-        <img class="h-full object-contain" src="{{ asset('/img/sans-titre-3.jpg') }}" alt="Schweissdissi par Marianne Maric">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+        <div class="relative group">
+            <img 
+                class="w-full h-full object-cover shadow-lg transform group-hover:scale-105 transition duration-300" 
+                src="{{ asset('/img/scan0026-2-1920x1280.webp') }}" 
+                alt="Schweissdissi par Marianne Maric"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition duration-300">Schweissdissi</span>
+            </div>
+        </div>
+        
+        <div class="relative group">
+            <img 
+                class="w-full h-full object-cover shadow-lg transform group-hover:scale-105 transition duration-300" 
+                src="{{ asset('/img/Christophe-Guye-Galerie-Marianne-Maric-Odalisque.jpg') }}" 
+                alt="Schweissdissi par Marianne Maric"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition duration-300">Odalisque</span>
+            </div>
+        </div>
+    
+        <div class="relative group">
+            <img 
+                class="w-full h-full object-cover shadow-lg transform group-hover:scale-105 transition duration-300" 
+                src="{{ asset('/img/marianne-maric-lamp-girl-photography-selling-sex-exhibition-at-showstudio.jpg') }}" 
+                alt="Schweissdissi par Marianne Maric"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition duration-300">Lamp Girl</span>
+            </div>
+        </div>
+    
+        <div class="relative group">
+            <img 
+                class="w-full h-full object-cover shadow-lg transform group-hover:scale-105 transition duration-300" 
+                src="{{ asset('/img/sans-titre-4.jpg') }}" 
+                alt="Schweissdissi par Marianne Maric"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition duration-300">Untitled 4</span>
+            </div>
+        </div>
+    
+        <div class="relative group">
+            <img 
+                class="w-full h-full object-cover shadow-lg transform group-hover:scale-105 transition duration-300" 
+                src="{{ asset('/img/SÇries_Sarajevo_Danube_copyright_Marianne_Maric-15.jpg') }}" 
+                alt="Schweissdissi par Marianne Maric"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition duration-300">Sarajevo Danube</span>
+            </div>
+        </div>
+    
+        <div class="relative group">
+            <img 
+                class="w-full h-full object-cover shadow-lg transform group-hover:scale-105 transition duration-300" 
+                src="{{ asset('/img/sans-titre-3.jpg') }}" 
+                alt="Schweissdissi par Marianne Maric"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition duration-300">Untitled 3</span>
+            </div>
+        </div>
     </div>
 
 
