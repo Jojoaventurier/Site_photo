@@ -13,18 +13,19 @@
         <div class="w-1/2 mr-8 flex flex-col items-center justify-center">
             <h1 class="antic-didone-regular text-4xl mb-4">Marianne Marić</h1>
 
-            <ul class="antic-didone-regular space-y-2">
-                <li><a class="hover:underline cursor-pointer">Photographs</a></li>
-                <li><a class="hover:underline cursor-pointer">Fashion</a></li>
-                <li><a class="hover:underline cursor-pointer">Exhibitions</a></li>
-                <li><a class="hover:underline cursor-pointer">Articles and books</a></li>
-                <li><a class="hover:underline cursor-pointer">CV</a></li>
-                <li><a class="hover:underline cursor-pointer">Contact info</a></li>
+            <ul class="antic-didone-regular flex flex-col space-y-2">
+                {% for item in menuItems %}
+                    <li>
+                        <a href="{{ path(item.route) }}" class="hover:underline cursor-pointer">
+                            {{ item.label }}
+                        </a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
 
         <div class="h-screen w-1/2 flex items-center">
-            <img class="h-full object-contain" src="{{ asset('/img/scan0035-scaled.webp') }}" alt="Architecture Corporelle par Marianne Maric">
+            <img class="h-full object-contain" src="{{ asset('/img/scan0035-scaled.webp') }}" alt="Schweissdissi par Marianne Maric">
         </div>
     </div>
 </div>

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Exhibitions - Marianne Marić{% endblock %}
+
+{% block body %}
+<div class="flex flex-col justify-center items-center">
+    <!-- Navigation Menu -->
+    <div>
+        <ul class="antic-didone-regular flex space-x-4 mb-8">
+            {% for item in menuItems %}
+                <li>
+                    <a href="{{ path(item.route) }}" class="hover:underline cursor-pointer">
+                        {{ item.label }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Exhibitions Section -->
+    <div class="w-[1280px] flex flex-col items-center justify-center m-auto">
+        <h1 class="antic-didone-regular text-4xl mb-8">Exhibitions</h1>
+        <ul class=" w-96 text-center space-y-6">
+            {% for event in exhibitions %}
+                <li class="p-6 border-b-2 border-gray-300">
+                    <h2 class="antic-didone-regular text-2xl font-semibold">{{ event.title }}</h2>
+                    <p class="text-lg text-gray-700">{{ event.location }} – {{ event.city }}</p>
+                    <p class="text-sm text-gray-500">{{ event.dates }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

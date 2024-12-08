@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Articles and books - Marianne Marić{% endblock %}
+
+{% block body %}
+
+<div class="flex flex-col justify-center ">
+    <ul class="antic-didone-regular flex space-x-4">
+        {% for item in menuItems %}
+            <li>
+                <a href="{{ path(item.route) }}" class="hover:underline cursor-pointer">
+                    {{ item.label }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="w-[1280px] flex items-center justify-center h-screen m-auto">
+        <div class="w-1/2 mr-8 flex flex-col items-center justify-center">
+            <h1 class="antic-didone-regular text-4xl mb-4">Articles and books</h1>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
