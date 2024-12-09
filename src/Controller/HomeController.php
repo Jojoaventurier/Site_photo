@@ -41,21 +41,24 @@ class HomeController extends AbstractController
                 'location' => 'Palais de Tokyo',
                 'city' => 'Paris',
                 'dates' => '13.11 / 01.12.24',
-                'url' => 'https://palaisdetokyo.com/exposition/la-republique-cynique/'
+                'url' => 'https://palaisdetokyo.com/exposition/la-republique-cynique/',
+                'image' => '/img/tokyo.png'
             ],
             [
                 'title' => '“Dirty Rains”',
                 'location' => 'CEAAC',
                 'city' => 'Strasbourg',
                 'dates' => '05.10.24 / 23.02.25',
-                'url' => 'https://ceaac.org/fr/exposition/dirty-rains/'
+                'url' => 'https://ceaac.org/fr/exposition/dirty-rains/',
+                'image' => '/img/evenement-strasbourg_502833804.jpg'
             ],
             [
                 'title' => 'Photo Saint Germain',
                 'location' => 'Hôtel La Louisiane',
                 'city' => 'Paris',
                 'dates' => '11.07 / 11.10.2024',
-                'url' => 'http://www.photosaintgermain.com/editions/2024/parcours/hotel-la-louisiane-roomservice'
+                'url' => 'http://www.photosaintgermain.com/editions/2024/parcours/hotel-la-louisiane-roomservice',
+                'image' => '/img/room_service.png'
             ],
         ];
     

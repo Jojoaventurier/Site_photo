@@ -20,17 +20,26 @@
     <!-- Exhibitions Section -->
     <div class="w-[1280px] flex flex-col items-center justify-center m-auto">
         <h1 class="antic-didone-regular text-4xl mb-8">Exhibitions</h1>
-        <ul class="w-96 text-center space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for event in exhibitions %}
-                <li class="p-6 border-b-2 border-gray-300 hover:bg-gray-100 transition duration-300">
-                    <a href="{{ event.url }}" class="block">
-                        <h2 class="antic-didone-regular text-2xl font-semibold hover:underline">{{ event.title }}</h2>
-                        <p class="text-lg text-gray-700">{{ event.location }} – {{ event.city }}</p>
-                        <p class="text-sm text-gray-500">{{ event.dates }}</p>
+                <div class="border-b-2 border-gray-300 rounded-lg overflow-hidden shadow-lg">
+                    <a href="{{ event.url }}" class="block group">
+                        <img 
+                            src="{{ asset(event.image) }}" 
+                            alt="{{ event.title }}" 
+                            class="w-full h-48 object-contain bg-gray-200 group-hover:opacity-90 transition duration-300"
+                        />
+                        <div class="p-4 bg-white">
+                            <h2 class="antic-didone-regular text-2xl font-semibold text-gray-800 group-hover:underline transition">
+                                {{ event.title }}
+                            </h2>
+                            <p class="text-lg text-gray-600">{{ event.location }} – {{ event.city }}</p>
+                            <p class="text-sm text-gray-500">{{ event.dates }}</p>
+                        </div>
                     </a>
-                </li>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 </div>
 {% endblock %}
