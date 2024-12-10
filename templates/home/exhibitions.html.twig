@@ -22,22 +22,22 @@
         <h1 class="antic-didone-regular text-4xl mb-8">Exhibitions</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for event in exhibitions %}
-                <div class="border-b-2 border-gray-300 rounded-lg overflow-hidden shadow-lg">
-                    <a href="{{ event.url }}" class="block group">
-                        <img 
-                            src="{{ asset(event.image) }}" 
-                            alt="{{ event.title }}" 
-                            class="w-full h-48 object-contain bg-gray-200 group-hover:opacity-90 transition duration-300"
-                        />
-                        <div class="p-4 bg-white">
-                            <h2 class="antic-didone-regular text-2xl font-semibold text-gray-800 group-hover:underline transition">
-                                {{ event.title }}
-                            </h2>
-                            <p class="text-lg text-gray-600">{{ event.location }} – {{ event.city }}</p>
-                            <p class="text-sm text-gray-500">{{ event.dates }}</p>
-                        </div>
-                    </a>
-                </div>
+            <div class="border-b-2 border-gray-300 rounded-lg overflow-hidden shadow-lg group transition duration-300 hover:shadow-xl hover:-translate-y-1">
+                <a href="{{ event.url }}" class="block">
+                    <img 
+                        src="{{ asset(event.image) }}" 
+                        alt="{{ event.title }}" 
+                        class="w-full h-48 object-contain bg-gray-200 group-hover:opacity-95 transition duration-300"
+                    />
+                    <div class="p-4 bg-white">
+                        <h2 class="antic-didone-regular text-2xl font-semibold text-gray-800 transition group-hover:underline group-hover:text-gray-900">
+                            {{ event.title }}
+                        </h2>
+                        <p class="text-lg text-gray-600">{{ event.location }} – {{ event.city }}</p>
+                        <p class="text-sm text-gray-500">{{ event.dates }}</p>
+                    </div>
+                </a>
+            </div>
             {% endfor %}
         </div>
     </div>
