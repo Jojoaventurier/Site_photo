@@ -3,13 +3,13 @@
 {% block title %}Exhibitions - Marianne Marić{% endblock %}
 
 {% block body %}
-<div class="flex flex-col justify-center items-center">
+<div class="flex flex-col justify-center items-center space-y-12 pt-12">
     <!-- Navigation Menu -->
     <div>
-        <ul class="antic-didone-regular flex space-x-4 mb-8">
+        <ul class="antic-didone-regular flex space-x-6 mb-8">
             {% for item in menuItems %}
                 <li>
-                    <a href="{{ path(item.route) }}" class="hover:underline cursor-pointer">
+                    <a href="{{ path(item.route) }}" class="hover:underline cursor-pointer text-lg">
                         {{ item.label }}
                     </a>
                 </li>
@@ -17,11 +17,11 @@
         </ul>
     </div>
 
-    <!-- Exhibitions Section -->
-    <div class="w-[1280px] flex flex-col items-center justify-center m-auto">
-        <h1 class="antic-didone-regular text-4xl mb-8">Exhibitions</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {% for event in exhibitions %}
+    <!-- Current Exhibitions Section -->
+    <div class="w-full max-w-[1280px] flex flex-col items-center justify-center px-6 space-y-12">
+        <h1 class="antic-didone-regular text-4xl mb-8 text-center">Current Exhibitions</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for event in currentExhibitions %}
             <div class="border-b-2 border-gray-300 rounded-lg overflow-hidden shadow-lg group transition duration-300 hover:shadow-xl hover:-translate-y-1">
                 <a href="{{ event.url }}" class="block">
                     <img 
@@ -40,6 +40,21 @@
             </div>
             {% endfor %}
         </div>
+    </div>
+
+    <!-- Past Exhibitions Section -->
+    <div class="w-full max-w-[1280px] flex flex-col items-center justify-center px-6 space-y-6">
+        <h2 class="antic-didone-regular text-3xl mb-6 text-center text-gray-700">Past Exhibitions</h2>
+        <ul class="space-y-4">
+            {% for event in pastExhibitions %}
+            <li class="border-l-4 border-gray-300 pl-4">
+                <div>
+                    <h3 class="text-xl text-gray-800 font-semibold">{{ event.title }}</h3>
+                    <p class="text-sm text-gray-600">{{ event.location }} – {{ event.city }} ({{ event.dates }})</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 {% endblock %}
