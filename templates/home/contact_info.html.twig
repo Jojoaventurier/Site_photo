@@ -3,9 +3,9 @@
 {% block title %}Contact Information - Marianne Marić{% endblock %}
 
 {% block body %}
-
-<div class="flex flex-col justify-center ">
-    <ul class="antic-didone-regular flex space-x-4">
+<div class="flex flex-col justify-center space-y-16">
+    <!-- Navigation Menu -->
+    <ul class="antic-didone-regular flex space-x-4 justify-center mt-8">
         {% for item in menuItems %}
             <li>
                 <a href="{{ path(item.route) }}" class="hover:underline cursor-pointer">
@@ -14,11 +14,42 @@
             </li>
         {% endfor %}
     </ul>
-    <div class="w-[1280px] flex items-center justify-center h-screen m-auto">
-        <div class="w-1/2 mr-8 flex flex-col items-center justify-center">
-            <h1 class="antic-didone-regular text-4xl mb-4">Contact information</h1>
+
+    <!-- Contact Section -->
+    <div class="w-[1280px] mx-auto flex flex-col space-y-12">
+        <div class="text-center">
+            <h1 class="antic-didone-regular text-4xl mb-4">Contact Information</h1>
+            <p class="text-lg text-gray-700">For inquiries, please reach out via email or connect through the social platforms below.</p>
         </div>
 
+        <div class="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
+            <!-- Email and Atelier -->
+            <div class="md:w-1/2 flex flex-col space-y-4">
+                <div>
+                    <h2 class="antic-didone-regular text-2xl mb-2">Professional Email</h2>
+                    <p class="text-lg text-gray-600">marianne.maric@example.com</p>
+                </div>
+                <div>
+                    <h2 class="antic-didone-regular text-2xl mb-2">Atelier</h2>
+                    <p class="text-lg text-gray-600">
+                        Atelier Maric<br>
+                        123 Rue de l'Artisanat<br>
+                        Strasbourg, France
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social Networks -->
+            <div class="md:w-1/2 flex flex-col space-y-4">
+                <h2 class="antic-didone-regular text-2xl mb-2">Find Me On</h2>
+                <ul class="space-y-2">
+                    <li><a href="https://instagram.com/marianne_maric" class="text-lg text-blue-600 hover:underline">Instagram</a></li>
+                    <li><a href="https://x.com/marianne_maric" class="text-lg text-blue-600 hover:underline">X (formerly Twitter)</a></li>
+                    <li><a href="https://vimeo.com/marianne_maric" class="text-lg text-blue-600 hover:underline">Vimeo</a></li>
+                    <li><a href="https://linkedin.com/in/marianne-maric" class="text-lg text-blue-600 hover:underline">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
