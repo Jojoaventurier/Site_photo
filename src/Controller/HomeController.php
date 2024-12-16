@@ -95,7 +95,7 @@ class HomeController extends AbstractController
                 'city' => 'Los Angeles',
                 'dates' => '12.05 / 15.08.22',
                 'url' => 'https://getty.edu/exhibition/visions-beyond',
-                'image' => '/img/getty_visions.png',
+                'image' => '/img/getty_vision.png',
             ],
             [
                 'title' => '“Whispers of Light”',
