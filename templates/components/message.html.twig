@@ -7,25 +7,25 @@
         </div>
     {% endfor %}
 
-    <div class="w-full max-w-md">
+    <div class="w-full max-w-l border border-gray-300 rounded-lg p-6 shadow-sm">
         {{ form_start(form, {'attr': {'class': 'space-y-4'}}) }}
-            <div>
-                {{ form_label(form.name, null, {'label_attr': {'class': 'block text-lg font-semibold'}}) }}
-                {{ form_widget(form.name, {'attr': {'class': 'form-input w-full'}}) }}
+            <div class="space-y-2">
+                {{ form_label(form.name, null, {'label_attr': {'class': 'block text-lg font-semibold text-gray-700'}}) }}
+                {{ form_widget(form.name, {'attr': {'class': 'form-input w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-300 focus:outline-none'}}) }}
                 {{ form_errors(form.name) }}
             </div>
-            <div>
-                {{ form_label(form.email, null, {'label_attr': {'class': 'block text-lg font-semibold'}}) }}
-                {{ form_widget(form.email, {'attr': {'class': 'form-input w-full'}}) }}
+            <div class="space-y-2">
+                {{ form_label(form.email, null, {'label_attr': {'class': 'block text-lg font-semibold text-gray-700'}}) }}
+                {{ form_widget(form.email, {'attr': {'class': 'form-input w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-300 focus:outline-none'}}) }}
                 {{ form_errors(form.email) }}
             </div>
-            <div>
-                {{ form_label(form.message, null, {'label_attr': {'class': 'block text-lg font-semibold'}}) }}
-                {{ form_widget(form.message, {'attr': {'class': 'form-textarea w-full'}}) }}
+            <div class="space-y-2">
+                {{ form_label(form.message, null, {'label_attr': {'class': 'block text-lg font-semibold text-gray-700'}}) }}
+                {{ form_widget(form.message, {'attr': {'class': 'form-textarea w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-300 focus:outline-none'}}) }}
                 {{ form_errors(form.message) }}
             </div>
-            <div>
-                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
+            <div class="pt-4">
+                <button type="submit" class="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-white hover:text-black transition focus:ring focus:outline-none">
                     Send Message
                 </button>
             </div>
